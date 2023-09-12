@@ -49,6 +49,20 @@ def h1(s):
     return res
 
 def h3(s):
-    # implement this function
     board, _, _ = s
-    return 0
+    goal = (1, 2, 3, 4, 5, 6, 7, 8, 0)
+    total_manhattan_distance = 0
+    for value in range(1, 9):
+        current_row, current_col = find_position(board, value)
+        goal_row, goal_col = find_position(goal, value)
+        manhattan_distance = abs(current_row - goal_row) + abs(current_col - goal_col)
+        total_manhattan_distance += manhattan_distance
+    return total_manhattan_distance
+
+def find_position(board, value):
+    for row in range(3):
+        for col in range(3):
+            if board[row * 3 + col] == value:
+                return row, col
+
+# Rest of your code for A* search
