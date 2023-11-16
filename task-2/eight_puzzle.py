@@ -65,4 +65,17 @@ def find_position(board, value):
             if board[row * 3 + col] == value:
                 return row, col
 
-# Rest of your code for A* search
+
+# def h3(s):
+#     # implement this function
+#     board, _, _ = s
+#     res =0
+#     for idx in range(0,8):
+#         num = board[idx]
+#         r = (num-1)//3
+#         c = (num-1)%3
+#         r_a = idx//3
+#         c_a = idx%3
+#         res += math.fabs(r-r_a) + math.fabs(c-c_a)
+
+#     return res

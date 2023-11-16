@@ -21,4 +21,3 @@ def successors(s):
         yield ((x + min(z, 8 - x), y, z - min(z, 8 - x)), 1)  # Change cost to 1 (integer)
         # Pour water from z to y
         yield ((x, y + min(z, 5 - y), z - min(z, 5 - y)), 1)  # Change cost to 1 (integer)
-
